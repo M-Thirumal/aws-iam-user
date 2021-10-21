@@ -1,1 +1,25 @@
-# aws-iam-user
+## AWS IAM USER
+
+Create `programmatic user` using `lambda` function
+
+1. Create `User`
+2. Create `Policy`
+3. Create `Attach policy to the user`
+4. Create `access key` and `secret key`
+
+#### Policy defined 
+* Gives `read and write` permission to the `specific folder` in `S3` bucket
+
+#### USAGE
+
+Invoke the lambda with following json input
+
+```json
+{
+  'AccountId': '65476567567',
+  'UserName': 'NEWIAMUSER',
+  'PolicyName': 'NEWPOLICY',
+  'BucketName': 'bucket_name',
+  'FolderName': 'FOLDERNAME'
+}
+```
