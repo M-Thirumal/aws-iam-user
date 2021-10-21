@@ -6,7 +6,7 @@ Create `programmatic user` using `lambda` function
 
 1. Create `User`
 2. Create `Policy`
-3. Create `Attach policy to the user`
+3. Attach `policy to the user`
 4. Create `access key` and `secret key`
 
 #### Policy defined 
@@ -16,7 +16,7 @@ Create `programmatic user` using `lambda` function
 
 Invoke the lambda with following json input
 
-```json
+```json line
 {
   'AccountId': '65476567567',
   'UserName': 'NEWIAMUSER',
