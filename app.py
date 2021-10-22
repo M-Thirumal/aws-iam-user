@@ -20,15 +20,19 @@ def create_iam_user(event, context):
     folder_name = event['FolderName']
     account_id = event['AccountId']
     bucket_name = event['BucketName']
+    policy_arn = event['PolicyARN'] if event['PolicyARN'] is not None else []
     logging.debug("Account ID: {}".format(account_id))
     # User
     user = create_user(user_name)
     logging.debug("User {}".format(user))
     # Policy
-    policy_arn = create_policy(policy_name, bucket_name, folder_name, account_id, user_name)
+    policy_arn.append(create_policy(policy_name, bucket_name, folder_name, account_id, user_name))
     # Attaching policy to the user
-    response = attach_policy(user_name, policy_arn)
-    logging.debug("Attach policy response".format(response))
+    if policy_arn is not None:
+        for policy in policy_arn:
+            logging.debug("policy arn {}".format(policy))
+            response = attach_policy(user_name, policy)
+            logging.debug("Attach policy response".format(response))
     # Create KEY
     return create_key(user_name, policy_arn)
 
