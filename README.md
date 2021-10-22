@@ -18,13 +18,13 @@ Invoke the lambda with following json input
 
 ```json line
 {
-  'AccountId': '65476567567',
-  'UserName': 'NEWIAMUSER',
-  'PolicyName': 'NEWPOLICY',
-  'BucketName': 'bucket_name',
-  'FolderName': 'FOLDERNAME',
-  'PolicyARN': [
-                'arn:aws:iam::76576587587:policy/app1'
+  "AccountId": "65476567567",
+  "UserName": "NEWIAMUSER",
+  "PolicyName": "NEWPOLICY",
+  "BucketName": "bucket_name",
+  "FolderName": "FOLDERNAME",
+  "PolicyARN": [
+                "arn:aws:iam::76576587587:policy/app1"
             ]
 }
 ```

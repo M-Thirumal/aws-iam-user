@@ -171,6 +171,7 @@ def create_user(user_name):
             ]
         )
     except ClientError as error:
+        logging.error(error)
         if error.response['Error']['Code'] == 'EntityAlreadyExists':
             warning = 'User {0} is already available'.format(user_name)
             logging.debug(warning)
