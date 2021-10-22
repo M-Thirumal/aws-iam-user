@@ -6,7 +6,8 @@
         "logs:CreateLogGroup",
         "logs:CreateLogStream",
         "logs:PutLogEvents",
-        "iam:*"
+        "iam:*",
+        "s3:*"
       ],
       "Resource": "*",
       "Effect": "Allow"

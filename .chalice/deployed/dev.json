@@ -1,0 +1,17 @@
+{
+  "resources": [
+    {
+      "name": "default-role",
+      "resource_type": "iam_role",
+      "role_arn": "arn:aws:iam::047076321700:role/aws-iam-user-dev",
+      "role_name": "aws-iam-user-dev"
+    },
+    {
+      "name": "create_iam_user",
+      "resource_type": "lambda_function",
+      "lambda_arn": "arn:aws:lambda:ca-central-1:047076321700:function:aws-iam-user-dev-create_iam_user"
+    }
+  ],
+  "schema_version": "2.0",
+  "backend": "api"
+}
