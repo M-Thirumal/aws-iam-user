@@ -84,7 +84,8 @@ def create_policy(policy_name, bucket_name, folder_name, account_id, user_name):
                 "Sid": "AllowStatement1",
                 "Action": [
                     "s3:ListAllMyBuckets",
-                    "s3:GetBucketLocation"
+                    "s3:GetBucketLocation",
+                    "s3:ListBucketVersions"
                 ],
                 "Effect": "Allow",
                 "Resource": [
