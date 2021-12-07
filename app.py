@@ -135,7 +135,8 @@ def create_policy(policy_name, bucket_name, folder_name, account_id, user_name):
                 "Effect": "Allow",
                 "Action": [
                     "s3:GetObject",
-                    "s3:PutObject"
+                    "s3:PutObject",
+                    "s3:GetObjectVersion"
                 ],
                 "Resource": [
                     "arn:aws:s3:::" + bucket_name + "/" + folder_name + "/*"
