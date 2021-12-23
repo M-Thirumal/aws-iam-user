@@ -1,16 +1,30 @@
 {
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Action": [
-        "logs:CreateLogGroup",
-        "logs:CreateLogStream",
-        "logs:PutLogEvents",
-        "iam:*",
-        "s3:*"
-      ],
-      "Resource": "*",
-      "Effect": "Allow"
-    }
-  ]
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "iam:AttachUserPolicy",
+                "iam:CreateAccessKey",
+                "iam:CreatePolicy",
+                "iam:CreateUser",
+                "iam:DeleteUser",
+                "iam:DetachUserPolicy",
+                "iam:TagUser"
+            ],
+            "Resource": [
+                "*"
+            ],
+            "Sid": "da1c7f3d69334969b01dd39dd7443de7"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "logs:CreateLogGroup",
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+            ],
+            "Resource": "arn:*:logs:*:*:*"
+        }
+    ]
 }
