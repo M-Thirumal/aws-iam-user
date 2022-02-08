@@ -136,6 +136,7 @@ def create_policy(policy_name, bucket_name, folder_name, account_id, user_name):
                 "Action": [
                     "s3:GetObject",
                     "s3:PutObject",
+                    "s3:GetObjectVersion",
                     "s3:GetObjectVersion"
                 ],
                 "Resource": [
