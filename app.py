@@ -137,7 +137,7 @@ def create_policy(policy_name, bucket_name, folder_name, account_id, user_name):
                     "s3:GetObject",
                     "s3:PutObject",
                     "s3:GetObjectVersion",
-                    "s3:GetObjectVersion"
+                    "s3:DeleteObjectVersion"
                 ],
                 "Resource": [
                     "arn:aws:s3:::" + bucket_name + "/" + folder_name + "/*"
