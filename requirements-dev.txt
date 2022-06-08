@@ -1,2 +1,3 @@
 chalice
-py.test
+boto3
+botocore
